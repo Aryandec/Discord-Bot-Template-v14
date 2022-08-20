@@ -1,0 +1,18 @@
+const { Client, ChatInputInteraction } = require("discord.js")
+
+module.exports = {
+  name: "",
+  description: "",
+  UserPerms: [],
+  BotPerms: [],
+  category: "",
+
+  /**
+  * @param {ChatInputInteraction} interaction   
+  * @param {Client} client
+  */
+
+async execute(client, interaction) {
+  const {  } = interaction
+   }
+}

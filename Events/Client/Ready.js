@@ -1,5 +1,7 @@
 const { Client } = require("discord.js")
 const ms = require("ms")
+const mongoose = require("mongoose")
+const MONGO = process.env.MONGO 
 
 module.exports = {
     name: "ready",
@@ -24,5 +26,13 @@ module.exports = {
 
         }, ms("5s"))
 
+      if (!MONGO) return
+      mongoose.connect(MONGO, {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,    
+      })
+        .then(() => {
+        console.log("Connected to Database")
+      }).catch(err => console.log(err))
     }
 }

@@ -26,4 +26,4 @@ Handlers.forEach(handler => {
 
 module.exports = client
 
-client.login(process.env.DISCORD_TOKEN)
+client.login(process.env.TOKEN)
